@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Here are some delivery options near you!</h1>
+
+{% for item in data %}
+<p>{{item.name}} --- {{item.display_phone}}</p>
+{% endfor %}
+
+
+
+{% endblock %}

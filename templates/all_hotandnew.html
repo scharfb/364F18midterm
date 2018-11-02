@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for item in results %}
+<p>{{item.restaurant_name}} --- {{item.phone}}</p>
+{% endfor %}
+
+{% endblock %}

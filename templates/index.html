@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+<h1>Welcome to Restaurant Yelp!</h1>
+{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('home') }}" method="GET">
+    {{ form.csrf_token }}
+    {{ form.user.label() }}{{ form.user() }}<br><br>
+    {{ form.location.label() }}{{ form.location() }}<br>
+
+    {{ form.submit() }}
+    {{ form.hidden_tag() }}
+</form>
+{% endblock %}

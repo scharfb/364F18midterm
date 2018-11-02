@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if review_exist %}
+<h2>Review already made for {{name}}</h2>
+{% else %}
+<h2>Review added for {{name}}</h2>
+{% endif %}
+
+
+
+<p>User: {{user}}</p>
+<p>Review: {{review}}</p>
+
+<br><br><br><br>
+<h3>Here are all of the reviews done by {{user}}</h3>
+{% for item in all %}
+<p>{{item.restaurant_name}} --- {{item.review}}</p>
+{% endfor %}
+
+
+
+{% endblock %}

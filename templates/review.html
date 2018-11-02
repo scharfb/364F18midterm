@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="{{ url_for('review', id=data.id, name=data.name, location=location) }}" method="POST">
+    {{ form.csrf_token }}
+    {{ form.id(hidden=true)}}
+    {{ form.name.label() }}{{ form.name(readonly=true) }}<br>
+    {{ form.user.label() }}{{ form.user() }}<br><br>
+    {{ form.review.label() }}{{ form.review() }}<br><br>
+
+    {{ form.submit() }}
+</form>
+{% endblock %}

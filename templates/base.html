@@ -1,0 +1,40 @@
+{% block head %}
+
+<!doctype html>
+<html>
+    <head>
+        <style>
+            /*body {text-align:center;}*/
+            /*ul {display: inline-block; text-align: left;}*/
+            table {border: 1px solid black;}
+            td {border: 1px solid black;}
+            img {max-height: 200px;}
+        </style>
+        <title>SI364 Midterm</title>
+    </head>
+    <body>
+
+{% endblock %}
+{% block nav %}
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Change Location</a></li>
+            <li><a href="{{ url_for('home', location=location) }}">Top Restaurants</a></li>
+            <li><a href="{{ url_for('delivery', location=location) }}">View Nearby Deliveries</a></li>
+            <li><a href="{{ url_for('hotandnew', location=location) }}">View Nearby Hot, New Places</a></li>
+            <li><a href="{{ url_for('all_logins', location=location) }}">View All Logins</a></li>
+            <li><a href="{{ url_for('all_reviews', location=location) }}">View All Reviews</a></li>
+            <li><a href="{{ url_for('all_deliveries', location=location) }}">View All Deliveries</a></li>
+            <li><a href="{{ url_for('all_hotandnew', location=location) }}">View All Hot, New Places</a></li>
+        </ul>
+
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+
+    </body>
+</html>
+{% endblock %}
